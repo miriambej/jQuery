@@ -48,9 +48,22 @@ $(function() {
 //   }, 1000);
 
 //delay so the animation starts once the previous one finish
-$(".red-box").fadeTo(1000, 0.2);
-$(".green-box").delay(1000).fadeTo(1000, 0.5);
-$(".blue-box").delay(2000).fadeTo(1000, 0.8).fadeOut().delay(500).fadeIn();
+// $(".red-box").fadeTo(1000, 0.2);
+// $(".green-box").delay(1000).fadeTo(1000, 0.5);
+// $(".blue-box").delay(2000).fadeTo(1000, 0.8).fadeOut().delay(500).fadeIn();
 
- 
+////////////////////////////TIMING ANIMATIONS USING CALLBACK FUNCTIONS//////////////////////////////////////
+
+  // $(".red-box").fadeTo(1000, 0, function() {
+  //   alert("This is a callback: Animation finished.");
+  // });
+
+  $(".red-box").animate({
+    "margin-left":"200px"
+  }, 1000, 0, function() {
+    $(".green-box").fadeTo(1000, 0, function() {
+      $(".blue-box").slideUp(1000);
+    });
+  });
+
 });
