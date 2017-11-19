@@ -58,12 +58,16 @@ $(function() {
   //   alert("This is a callback: Animation finished.");
   // });
 
-  $(".red-box").animate({
-    "margin-left":"200px"
-  }, 1000, 0, function() {
-    $(".green-box").fadeTo(1000, 0, function() {
-      $(".blue-box").slideUp(1000);
-    });
-  });
+  // $(".red-box").animate({
+  //   "margin-left":"200px"
+  //   }, 1000, 0, function() {
+  //   $(".green-box").fadeTo(1000, 0, function() {
+  //     $(".blue-box").slideUp(1000);
+  //   });
+  // });
+
+////////////////////////////CODING ACTIVITY : CREATING A SIGN UP LIGHTBOX//////////////////////////////////////
+
+  $(".lightbox").delay(500).fadeIn(1000);
 
 });
