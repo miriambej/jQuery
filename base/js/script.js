@@ -22,10 +22,18 @@ $(function() {
   // $(".blue-box").slideUp(2000); //disappear
   // $(".blue-box").slideDown(2000); //appear
 
-  $(".blue-box").slideToggle(2000); //appear
+  // $(".blue-box").slideToggle(2000); //appear
 
-  $("p").hide(); 
-  $("p").slideDown(1000); 
+  // $("p").hide(); 
+  // $("p").slideDown(1000); 
+
+  $(".blue-box").animate({
+    "margin-left":"+=200px"
+  }, 2000, "linear"); 
+
+  $(".blue-box").animate({
+    "margin-left":"-=200px"
+  }, 2000, "linear");
 
 
 
