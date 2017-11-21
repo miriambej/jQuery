@@ -82,7 +82,21 @@ $(function() {
  //$("li:even").css("background-color", "rgba(180, 180, 30, 0.8)"); //to select the last li
  //$("li:odd").css("background-color", "rgba(180, 180, 30, 0.8)"); //to select the last li
 
- $("input:text").css("background-color", "rgba(180, 180, 30, 0.8)"); 
+ //$("input:text").css("background-color", "rgba(180, 180, 30, 0.8)"); 
+
+////////////////////////////jQuery Methods for Traversal//////////////////////////////////////
+
+  //$("#list").find("li").css("background-color", "rgba(180, 180, 30, 0.8)"); //all the children get selected in all levels
+ // $("#list").children("li").css("background-color", "rgba(180, 180, 30, 0.8)"); //only the direct children get selected 
+// $("#list").parents("body").css("background-color", "rgba(180, 180, 30, 0.8)"); //gets the parents, grandparents, etc 
+// $("#list").parent("body").css("background-color", "rgba(180, 180, 30, 0.8)"); //only the parent get selected 
+ //$("#list").siblings().css("background-color", "rgba(180, 180, 30, 0.8)"); //the siblings of list
+ //$("#list").siblings(":header").css("background-color", "rgba(180, 180, 30, 0.8)"); //the tags from h1 to h6
+ //$("#list").next().css("background-color", "rgba(180, 180, 30, 0.8)"); //next element
+ //$("#list").prev().css("background-color", "rgba(180, 180, 30, 0.8)"); //previous element
+ $(":header").next().css("background-color", "rgba(180, 180, 30, 0.8)"); //select the next element of all the headers
+ $("form").children("input[type='email']").css("background-color", "rgba(180, 180, 30, 0.8)"); //select input type email
+
 
 
 });
